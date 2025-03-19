@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/home.tsx";
+import Home from "./pages/home/Home.tsx";
 import Navbar from "./components/Navbar.tsx";
 import styled from "styled-components";
 
