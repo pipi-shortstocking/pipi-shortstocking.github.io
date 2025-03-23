@@ -1,17 +1,18 @@
+import { Link } from "react-router-dom";
 import { styled, keyframes } from "styled-components";
 
 export default function Navbar() {
   return (
     <Header>
       <NavContainer>
-        <NavHome>
+        <NavHome to="/">
           김정윤
           <NavHomeDeco>_</NavHomeDeco>
         </NavHome>
         <NavItems>
-          <NavItem>About</NavItem>
-          <NavItem>Projects</NavItem>
-          <NavItem>Contact</NavItem>
+          <NavItem to="/about">About</NavItem>
+          <NavItem to="/projects">Projects</NavItem>
+          <NavItem to="/contact">Contact</NavItem>
         </NavItems>
       </NavContainer>
     </Header>
@@ -38,12 +39,16 @@ const NavContainer = styled.div`
   border-bottom-style: solid;
 `;
 
-const NavHome = styled.div`
+const NavHome = styled(Link)`
   font-size: 2rem;
   font-weight: bold;
   color: #99582a;
   font-family: "42dot Sans", sans-serif;
   font-weight: 800;
+  text-decoration: none;
+  &:hover {
+    color: #432818;
+  }
 `;
 
 const blink = keyframes`
@@ -67,10 +72,14 @@ const NavItems = styled.div`
   font-size: 1.8rem;
 `;
 
-const NavItem = styled.span`
+const NavItem = styled(Link)`
   margin: 0 1rem;
   color: #99582a;
   position: relative;
+
+  &:hover {
+    color: #432818;
+  }
 
   &:hover::after {
     content: "";

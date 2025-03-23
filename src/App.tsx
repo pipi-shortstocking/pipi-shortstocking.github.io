@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/Home.tsx";
+import Home from "./pages/Home.tsx";
 import Navbar from "./components/Navbar.tsx";
+import Contact from "./pages/Contact.tsx";
 import styled from "styled-components";
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
         <Content>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Content>
       </AppContainer>
