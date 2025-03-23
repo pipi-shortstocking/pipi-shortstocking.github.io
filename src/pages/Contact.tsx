@@ -7,12 +7,26 @@ export default function Contact() {
   return (
     <ContactContainer>
       <Title>Contact</Title>
-      <Subtitle>편하게 연락주세요!</Subtitle>\
+      <Subtitle>편하게 연락주세요!</Subtitle>
       <IconContainer>
-        <GithubIcon />
-        <VelogIcon />
-        <LinkedInIcon />
-        <InstagramIcon />
+        <IconLink href="https://github.com/pipi-shortstocking" target="_blank">
+          <GithubIcon />
+        </IconLink>
+        <IconLink href="https://velog.io/@jannie526" target="_blank">
+          <VelogIcon />
+        </IconLink>
+        <IconLink
+          href="https://www.linkedin.com/in/jeongyun-kim-8596b632b/"
+          target="_blank"
+        >
+          <LinkedInIcon />
+        </IconLink>
+        <IconLink
+          href="https://www.instagram.com/dev_pipi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          target="_blank"
+        >
+          <InstagramIcon />
+        </IconLink>
       </IconContainer>
     </ContactContainer>
   );
@@ -23,7 +37,7 @@ const ContactContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30rem;
+  margin-bottom: 25rem;
 `;
 
 const Title = styled.h1`
@@ -44,29 +58,29 @@ const IconContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 2rem 0;
+`;
+
+const IconLink = styled.a`
+  margin: 0 0.5rem;
 `;
 
 const GithubIcon = styled(IoLogoGithub)`
   font-size: 60px;
   color: black;
-  margin: 0 0.5rem;
 `;
 
 const VelogIcon = styled(SiVelog)`
   font-size: 60px;
   color: #20c997;
-  margin: 0 0.5rem;
 `;
 
 const LinkedInIcon = styled(FaLinkedin)`
   font-size: 60px;
   color: #0077b5;
-  margin: 0 0.5rem;
 `;
 
 const InstagramIcon = styled(FaInstagram)`
   font-size: 60px;
   color: black;
-  margin: 0 0.5rem;
 `;
