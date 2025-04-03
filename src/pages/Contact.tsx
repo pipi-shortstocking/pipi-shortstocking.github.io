@@ -1,7 +1,10 @@
 import styled from "styled-components";
-import { IoLogoGithub } from "react-icons/io";
-import { SiVelog } from "react-icons/si";
-import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import {
+  AiOutlineGithub,
+  AiOutlineLink,
+  AiOutlineLinkedin,
+  AiOutlineInstagram,
+} from "react-icons/ai";
 import { useState } from "react";
 
 export default function Contact() {
@@ -22,22 +25,22 @@ export default function Contact() {
       <Subtitle>편하게 연락주세요!</Subtitle>
       <IconContainer>
         <IconLink href="https://github.com/pipi-shortstocking" target="_blank">
-          <GithubIcon />
+          <AiOutlineGithub />
         </IconLink>
         <IconLink href="https://velog.io/@jannie526" target="_blank">
-          <VelogIcon />
+          <AiOutlineLink />
         </IconLink>
         <IconLink
           href="https://www.linkedin.com/in/jeongyun-kim-8596b632b/"
           target="_blank"
         >
-          <LinkedInIcon />
+          <AiOutlineLinkedin />
         </IconLink>
         <IconLink
           href="https://www.instagram.com/dev_pipi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
           target="_blank"
         >
-          <InstagramIcon />
+          <AiOutlineInstagram />
         </IconLink>
       </IconContainer>
       <EmailForm>
@@ -83,14 +86,14 @@ const ContactContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  color: #432818;
+  color: #212529;
   font-size: 6rem;
   margin: 0;
   font-family: "Anton", sans-serif;
 `;
 
 const Subtitle = styled.h3`
-  color: #99582a;
+  color: #495057;
   font-size: 1.7rem;
   margin: 0;
   font-family: "42dot Sans", sans-serif;
@@ -103,21 +106,6 @@ const IconContainer = styled.div`
 
 const IconLink = styled.a`
   margin: 0 0.5rem;
-`;
-
-const GithubIcon = styled(IoLogoGithub)`
-  color: black;
-`;
-
-const VelogIcon = styled(SiVelog)`
-  color: #20c997;
-`;
-
-const LinkedInIcon = styled(FaLinkedin)`
-  color: #0077b5;
-`;
-
-const InstagramIcon = styled(FaInstagram)`
   color: black;
 `;
 
@@ -150,7 +138,7 @@ const InfoContainer = styled.div`
 
 const Label = styled.label`
   font-size: 1rem;
-  color: #99582a;
+  color: #212529;
   font-family: "42dot Sans", sans-serif;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -159,14 +147,15 @@ const Label = styled.label`
 const Input = styled.input`
   height: 2rem;
   width: 20rem;
-  background-color: #fefae0;
+  // background-color: #ffffff;
+  background-color: #f8f8f8;
   border: none;
-  border-bottom: 2px solid #432818;
+  border-bottom: 2px solid #212529;
   font-size: 1rem;
-  color: #432818;
+  color: #212529;
   font-family: "42dot Sans", sans-serif;
   &::placeholder {
-    color: #b08968; /* placeholder 색상 변경 */
+    color: #6c757d; /* placeholder 색상 변경 */
   }
   &:focus {
     outline: none;
@@ -176,14 +165,15 @@ const Input = styled.input`
 const MailContent = styled.textarea`
   height: 10rem;
   width: 43rem;
-  background-color: #fefae0;
+  // background-color: #ffffff;
+  background-color: #f8f8f8;
   border: none;
   border-bottom: 2px solid #432818;
   font-size: 1rem;
-  color: #432818;
+  color: #212529;
   font-family: "42dot Sans", sans-serif;
   &::placeholder {
-    color: #b08968; /* placeholder 색상 변경 */
+    color: #6c757d; /* placeholder 색상 변경 */
   }
   &:focus {
     outline: none;
@@ -191,8 +181,8 @@ const MailContent = styled.textarea`
 `;
 
 const SendButton = styled.button`
-  background-color: #432818;
-  color: #fefae0;
+  background-color: #212529;
+  color: #f8f9fa;
   font-size: 1.2rem;
   font-family: "Anton", sans-serif;
   margin-top: 2rem;

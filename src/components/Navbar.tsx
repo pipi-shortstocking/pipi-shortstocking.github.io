@@ -1,93 +1,77 @@
-import { Link } from "react-router-dom";
-import { styled, keyframes } from "styled-components";
+import { NavLink } from "react-router-dom";
+import { styled } from "styled-components";
+import {
+  AiOutlineHome,
+  AiOutlineUser,
+  AiOutlineCode,
+  AiOutlineMail,
+} from "react-icons/ai";
 
 export default function Navbar() {
   return (
-    <Header>
+    <Nav>
       <NavContainer>
-        <NavHome to="/">
-          김정윤
-          <NavHomeDeco>_</NavHomeDeco>
-        </NavHome>
-        <NavItems>
-          <NavItem to="/about">About</NavItem>
-          <NavItem to="/projects">Projects</NavItem>
-          <NavItem to="/contact">Contact</NavItem>
-        </NavItems>
+        <NavItem to="/">
+          <AiOutlineHome />
+        </NavItem>
+        <NavItem to="/about">
+          <AiOutlineUser />
+        </NavItem>
+        <NavItem to="/projects">
+          <AiOutlineCode />
+        </NavItem>
+        <NavItem to="/contact">
+          <AiOutlineMail />
+        </NavItem>
       </NavContainer>
-    </Header>
+    </Nav>
   );
 }
 
-const Header = styled.header`
+const Nav = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fefae0;
-  padding: 0 2rem;
+  width: 100%;
+  height: auto;
+  position: fixed; /* 화면에 고정 */
+  bottom: 1.5rem; /* 화면 하단에 위치 */
+  z-index: 1000; /* 다른 요소 위에 표시되도록 설정 */
 `;
 
-const NavContainer = styled.div`
+const NavContainer = styled.nav`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  height: 7vh;
-  width: 80vw;
-  padding: 0 2rem;
-  border-bottom-color: #432818;
-  border-bottom-width: 2.5px;
-  border-bottom-style: solid;
-`;
-
-const NavHome = styled(Link)`
+  border-radius: 20px;
+  padding: 0.7rem;
+  box-shadow: 0 4px 15px #ced4da;
+  width: 18rem;
+  max-width: 18rem;
   font-size: 2rem;
-  font-weight: bold;
-  color: #99582a;
-  font-family: "42dot Sans", sans-serif;
-  font-weight: 800;
-  text-decoration: none;
-  &:hover {
-    color: #432818;
-  }
+  background-color: #ffffff;
 `;
 
-const blink = keyframes`
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-`;
-
-const NavHomeDeco = styled.span`
-  animation: ${blink} 1.5s infinite;
-  color: #432818;
-`;
-
-const NavItems = styled.div`
+const NavItem = styled(NavLink)`
   display: flex;
+  justify-content: center;
   align-items: center;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 1.8rem;
-`;
-
-const NavItem = styled(Link)`
-  margin: 0 1rem;
-  color: #99582a;
-  position: relative;
+  width: 55px;
+  height: 55px;
+  border-radius: 20%;
+  color: #212529;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px #dee2e6;
 
   &:hover {
-    color: #432818;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px #ced4da;
+    color: #212529;
   }
 
-  &:hover::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #432818;
-    bottom: 2px;
-    left: 0;
+  &.active {
+    background-color: #dee2e6;
   }
 `;

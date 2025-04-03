@@ -26,7 +26,7 @@ const TextContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  color: #432818;
+  color: #212529;
   font-size: 10rem;
   margin: 0;
   // font-family: "Bebas Neue", sans-serif;
@@ -34,7 +34,7 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.h3`
-  color: #99582a;
+  color: #495057;
   font-size: 2.2rem;
   margin: 0;
   // font-family: "Bebas Neue", sans-serif;
