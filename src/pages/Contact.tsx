@@ -87,9 +87,10 @@ const ContactContainer = styled.div`
 
 const Title = styled.h1`
   color: #212529;
-  font-size: 6rem;
+  font-size: 7rem;
   margin: 0;
-  font-family: "Anton", sans-serif;
+  // font-family: "Anton", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 `;
 
 const Subtitle = styled.h3`
@@ -147,7 +148,6 @@ const Label = styled.label`
 const Input = styled.input`
   height: 2rem;
   width: 20rem;
-  // background-color: #ffffff;
   background-color: #f8f8f8;
   border: none;
   border-bottom: 2px solid #212529;
@@ -165,7 +165,6 @@ const Input = styled.input`
 const MailContent = styled.textarea`
   height: 10rem;
   width: 43rem;
-  // background-color: #ffffff;
   background-color: #f8f8f8;
   border: none;
   border-bottom: 2px solid #432818;
@@ -183,10 +182,11 @@ const MailContent = styled.textarea`
 const SendButton = styled.button`
   background-color: #212529;
   color: #f8f9fa;
-  font-size: 1.2rem;
-  font-family: "Anton", sans-serif;
-  margin-top: 2rem;
-  padding: 0.5rem 1.5rem;
+  font-size: 1.6rem;
+  // font-family: "Anton", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.3rem;
   border: none;
   &:hover {
     background-color: #99582a;

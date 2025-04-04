@@ -33,6 +33,7 @@ const AppContainer = styled.div`
   padding: 0;
   background-color: #ffffff;
   user-select: none;
+  overflow-x: hidden;
 `;
 
 const Content = styled.div`

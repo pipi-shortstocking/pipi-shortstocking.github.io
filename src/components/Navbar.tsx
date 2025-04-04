@@ -11,16 +11,16 @@ export default function Navbar() {
   return (
     <Nav>
       <NavContainer>
-        <NavItem to="/">
+        <NavItem to="/" data-tooltip="Home">
           <AiOutlineHome />
         </NavItem>
-        <NavItem to="/about">
+        <NavItem to="/about" data-tooltip="About">
           <AiOutlineUser />
         </NavItem>
-        <NavItem to="/projects">
+        <NavItem to="/projects" data-tooltip="Projects">
           <AiOutlineCode />
         </NavItem>
-        <NavItem to="/contact">
+        <NavItem to="/contact" data-tooltip="Contact">
           <AiOutlineMail />
         </NavItem>
       </NavContainer>
@@ -64,6 +64,7 @@ const NavItem = styled(NavLink)`
   transition: all 0.3s ease;
   background-color: #ffffff;
   box-shadow: 0 4px 15px #dee2e6;
+  position: relative;
 
   &:hover {
     transform: translateY(-3px);
@@ -73,5 +74,27 @@ const NavItem = styled(NavLink)`
 
   &.active {
     background-color: #dee2e6;
+  }
+
+  &::after {
+    content: attr(data-tooltip); /* data-tooltip 속성의 값을 표시 */
+    position: absolute;
+    bottom: 70px; /* 아이콘 위에 표시 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #212529;
+    color: #ffffff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
   }
 `;

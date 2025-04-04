@@ -17,6 +17,6 @@ const ProjectsContainer = styled.div`
 
 const Greet = styled.h2`
   font-family: "42dot Sans", sans-serif;
-  color: #99582a;
+  color: #212529;
   font-size: 2rem;
 `;
