@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { TbLayersLinked } from "react-icons/tb";
 import {
   AiOutlineGithub,
   AiOutlineLink,
@@ -22,7 +21,7 @@ export default function About() {
             rel="noopener noreferrer"
             data-tooltip="Resume"
           >
-            <TbLayersLinked size={22} />
+            <AiOutlineLink size={28} />
           </ResumeLink>
         </Title>
         <Content>
@@ -178,7 +177,7 @@ const ResumeLink = styled.a`
   &::after {
     content: attr(data-tooltip);
     position: absolute;
-    left: 270%;
+    left: 230%;
     transform: translateX(-50%);
     background-color: #212529;
     color: #ffffff;
