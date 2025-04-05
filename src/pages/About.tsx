@@ -5,6 +5,7 @@ import {
   AiOutlineLink,
   AiOutlineLinkedin,
   AiOutlineInstagram,
+  AiOutlineDesktop,
 } from "react-icons/ai";
 
 export default function About() {
@@ -15,17 +16,14 @@ export default function About() {
         {/* <Img src="/k.jpg" /> */}
         <Title>
           김정윤 | JeongYun Kim
-          <TbLayersLinked
-            size={22}
-            style={{ cursor: "pointer" }}
-            onClick={() =>
-              window.open(
-                "https://my.surfit.io/w/313702032",
-                "_blank",
-                "noopener,noreferrer"
-              )
-            }
-          />
+          <ResumeLink
+            href="https://my.surfit.io/w/313702032"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-tooltip="Resume"
+          >
+            <TbLayersLinked size={22} />
+          </ResumeLink>
         </Title>
         <Content>
           💻 Backend developer
@@ -42,7 +40,7 @@ export default function About() {
             Github
           </Link>
           <Link href="https://velog.io/@jannie526" target="_blank">
-            <AiOutlineLink size={22} />
+            <AiOutlineDesktop size={22} />
             Blog
           </Link>
           <Link
@@ -159,6 +157,44 @@ const Img = styled.img`
   width: 100%;
   max-width: 30rem;
   margin: 1rem 0;
+`;
+
+const ResumeLink = styled.a`
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #212529;
+
+  &:hover {
+    color: #415a77;
+  }
+
+  &.active {
+    background-color: #dee2e6;
+  }
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 270%;
+    transform: translateX(-50%);
+    background-color: #212529;
+    color: #ffffff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
 `;
 
 const Title = styled.h1`

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import {
   AiOutlineGithub,
-  AiOutlineLink,
   AiOutlineLinkedin,
   AiOutlineInstagram,
+  AiOutlineDesktop,
 } from "react-icons/ai";
 import { useState } from "react";
 
@@ -28,7 +28,7 @@ export default function Contact() {
           <AiOutlineGithub />
         </IconLink>
         <IconLink href="https://velog.io/@jannie526" target="_blank">
-          <AiOutlineLink />
+          <AiOutlineDesktop />
         </IconLink>
         <IconLink
           href="https://www.linkedin.com/in/jeongyun-kim-8596b632b/"
@@ -108,6 +108,10 @@ const IconContainer = styled.div`
 const IconLink = styled.a`
   margin: 0 0.5rem;
   color: black;
+
+  &:hover {
+    color: #415a77;
+  }
 `;
 
 const EmailForm = styled.form`
@@ -154,9 +158,11 @@ const Input = styled.input`
   font-size: 1rem;
   color: #212529;
   font-family: "42dot Sans", sans-serif;
+
   &::placeholder {
-    color: #6c757d; /* placeholder 색상 변경 */
+    color: #6c757d;
   }
+
   &:focus {
     outline: none;
   }
@@ -171,9 +177,11 @@ const MailContent = styled.textarea`
   font-size: 1rem;
   color: #212529;
   font-family: "42dot Sans", sans-serif;
+
   &::placeholder {
     color: #6c757d; /* placeholder 색상 변경 */
   }
+
   &:focus {
     outline: none;
   }
@@ -188,7 +196,8 @@ const SendButton = styled.button`
   margin: 1.5rem 0;
   padding: 0.5rem 1.3rem;
   border: none;
+
   &:hover {
-    background-color: #99582a;
+    background-color: #415a77;
   }
 `;
