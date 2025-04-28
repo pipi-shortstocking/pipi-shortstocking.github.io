@@ -27,7 +27,7 @@ export default function About() {
         <Content>
           💻 Backend developer
           <br />
-          🏫 Kwangwoon Univ, Software.
+          🎓 Kwangwoon Univ, Software.
           <br />
           🍇 포도상점 Dev Team Manager & Backend developer
           <br />
@@ -59,7 +59,7 @@ export default function About() {
         </LinkContainer>
       </ProfileContainer>
       <InfoContainer>
-        <ContactContainer>
+        <ElementContainer>
           <Title>👩‍💻 About me</Title>
           <Content>
             기술을 위한 기술이 아닌 그 기술 너머에 존재하는 사용자에 집중합니다.
@@ -84,8 +84,8 @@ export default function About() {
             공유하고 있습니다. 이 과정은 저의 성장뿐만 아니라, 다른 개발자들과의
             지식 교류에도 큰 도움이 되고 있습니다.
           </Content>
-        </ContactContainer>
-        <ContactContainer>
+        </ElementContainer>
+        <ElementContainer>
           <Title>💻 Skills</Title>
           <Content>
             <Subtitle>BackEnd</Subtitle>
@@ -101,8 +101,8 @@ export default function About() {
             <Subtitle>Others</Subtitle>
             <Content>- Git, GitHub, AWS, Unity, Postman, Swagger</Content>
           </Content>
-        </ContactContainer>
-        <ContactContainer>
+        </ElementContainer>
+        <ElementContainer>
           <Title>🏆 Prize & Experience</Title>
           <Subtitle>2022 광운대학교 산학협력 SW 프로젝트 인기상</Subtitle>
           <Content> - 집안 환경 내 VR 메타버스 소아 응급처치 교육</Content>
@@ -116,12 +116,12 @@ export default function About() {
           <Content>- 포도상점</Content>
           <Subtitle>2025 광운대학교 캠퍼스타운</Subtitle>
           <Content>- 포도상점</Content>
-        </ContactContainer>
-        <ContactContainer>
+        </ElementContainer>
+        <ElementContainer>
           <Title>🌐 License & Certificate</Title>
           <Subtitle>OPIc (외국어 말하기 평가, 영어)</Subtitle>
           <Content> - IH (Intermediate High)</Content>
-        </ContactContainer>
+        </ElementContainer>
       </InfoContainer>
     </AboutContainer>
   );
@@ -262,7 +262,7 @@ const InfoContainer = styled.div`
   gap: 2rem;
 `;
 
-const ContactContainer = styled.div`
+const ElementContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
