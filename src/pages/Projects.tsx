@@ -14,9 +14,10 @@ export default function About() {
             <Img src="/Frame 1 (1).png" />
           </a>
           <Title>포도상점</Title>
-          <Subtitle>Backend Developer</Subtitle>
-          <Subtitle>2023.02 ~ 2023.07</Subtitle>
-          <Content>Spring Boot, JPA, QueryDSL, AWS, MySQL</Content>
+          <Subtitle>BE | 2023.02 ~ 2023.07</Subtitle>
+          <Content>
+            Spring Boot, JPA, MySQL, AWS, React, Docker, Swagger
+          </Content>
         </ElementContainer>
         <ElementContainer>
           <a
@@ -27,9 +28,36 @@ export default function About() {
             <Img src="/Frame 2 (1).png" />
           </a>
           <Title>포도티켓</Title>
-          <Subtitle>Backend Developer</Subtitle>
-          <Subtitle>2023.08 ~ 2023.10</Subtitle>
-          <Content>Spring Boot, JPA, QueryDSL, AWS, MySQL</Content>
+          <Subtitle>BE | 2023.08 ~ 2023.10</Subtitle>
+          <Content>
+            Node.js, Express.js, Sequlize, WebSocket, MySQL, AWS, React
+          </Content>
+        </ElementContainer>
+      </InfoContainer>
+      <InfoContainer>
+        <ElementContainer>
+          <a
+            href="https://github.com/PepperStones/BE"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Img src="/Frame 1 (1).png" />
+          </a>
+          <Title>Blaybus 실전 앱 개발 경진대회</Title>
+          <Subtitle>BE | 2025.01 ~ 2025.01</Subtitle>
+          <Content>Spring Boot, JPA, MySQL, AWS, React, PWA, Swagger</Content>
+        </ElementContainer>
+        <ElementContainer>
+          <a
+            href="https://github.com/KW-MUJI"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Img src="/Frame 2 (1).png" />
+          </a>
+          <Title>광운대학교 참빛설계학기</Title>
+          <Subtitle>BE | 2024.08 ~ 2024.12</Subtitle>
+          <Content>Spring Boot, JPA, MySQL, AWS, React, Swagger</Content>
         </ElementContainer>
       </InfoContainer>
     </ProjectsContainer>
@@ -45,10 +73,10 @@ const ProjectsContainer = styled.div`
 
 const InfoContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-bottom: 6rem;
+  padding: 1rem 0;
   gap: 2rem;
 `;
 
@@ -74,18 +102,18 @@ const Img = styled.img`
 const Title = styled.h1`
   display: flex;
   align-items: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #212529;
-  margin: 0.5rem 0;
+  margin: 0;
   text-align: left;
   font-family: "42dot Sans", sans-serif;
   gap: 0.5rem;
 `;
 
 const Subtitle = styled.h2`
-  font-size: 1.2rem;
+  font-size: 1.06rem;
   color: #212529;
-  margin: 0.6rem 0 0 0;
+  margin: 0.4rem 0 0 0;
   text-align: left;
   font-family: "42dot Sans", sans-serif;
 `;

@@ -4,6 +4,7 @@ import {
   AiOutlineLinkedin,
   AiOutlineInstagram,
   AiOutlineDesktop,
+  AiOutlineLink,
 } from "react-icons/ai";
 import { useState } from "react";
 
@@ -24,21 +25,38 @@ export default function Contact() {
       <Title>Contact</Title>
       <Subtitle>편하게 연락주세요!</Subtitle>
       <IconContainer>
-        <IconLink href="https://github.com/pipi-shortstocking" target="_blank">
+        <IconLink
+          href="https://my.surfit.io/w/313702032"
+          target="_blank"
+          data-tooltip="Resume"
+        >
+          <AiOutlineLink />
+        </IconLink>
+        <IconLink
+          href="https://github.com/pipi-shortstocking"
+          target="_blank"
+          data-tooltip="GitHub"
+        >
           <AiOutlineGithub />
         </IconLink>
-        <IconLink href="https://velog.io/@jannie526" target="_blank">
+        <IconLink
+          href="https://velog.io/@jannie526"
+          target="_blank"
+          data-tooltip="Blog"
+        >
           <AiOutlineDesktop />
         </IconLink>
         <IconLink
           href="https://www.linkedin.com/in/jeongyun-kim-8596b632b/"
           target="_blank"
+          data-tooltip="LinkedIn"
         >
           <AiOutlineLinkedin />
         </IconLink>
         <IconLink
           href="https://www.instagram.com/dev_pipi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
           target="_blank"
+          data-tooltip="Instagram"
         >
           <AiOutlineInstagram />
         </IconLink>
@@ -108,9 +126,37 @@ const IconContainer = styled.div`
 const IconLink = styled.a`
   margin: 0 0.5rem;
   color: black;
+  position: relative;
 
   &:hover {
-    color: #415a77;
+    color: #495057;
+  }
+
+  &.active {
+    background-color: #dee2e6;
+  }
+
+  &::after {
+    content: attr(data-tooltip); /* data-tooltip 속성의 값을 표시 */
+    position: absolute;
+    bottom: -40%; /* 아이콘 아래에 표시 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #212529;
+    color: #ffffff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10; /* 툴팁이 다른 요소 위에 표시되도록 설정 */
+  }
+
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
   }
 `;
 
@@ -198,6 +244,6 @@ const SendButton = styled.button`
   border: none;
 
   &:hover {
-    background-color: #415a77;
+    background-color: #495057;
   }
 `;
