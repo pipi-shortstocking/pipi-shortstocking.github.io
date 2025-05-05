@@ -41,7 +41,7 @@ export default function About() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Img src="/Frame 1 (1).png" />
+            <Img src="/Frame 4.png" />
           </a>
           <Title>Blaybus 실전 앱 개발 경진대회</Title>
           <Subtitle>BE | 2025.01 ~ 2025.01</Subtitle>
@@ -53,7 +53,7 @@ export default function About() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Img src="/Frame 2 (1).png" />
+            <Img src="/Frame 3.png" />
           </a>
           <Title>광운대학교 참빛설계학기</Title>
           <Subtitle>BE | 2024.08 ~ 2024.12</Subtitle>
@@ -69,6 +69,7 @@ const ProjectsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 6rem;
 `;
 
 const InfoContainer = styled.div`
