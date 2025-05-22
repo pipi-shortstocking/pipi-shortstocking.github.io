@@ -3,8 +3,8 @@ import {
   AiOutlineGithub,
   AiOutlineLinkedin,
   AiOutlineInstagram,
-  AiOutlineDesktop,
-  AiOutlineLink,
+  AiOutlineEdit,
+  AiOutlineAudit,
 } from "react-icons/ai";
 import { useState } from "react";
 
@@ -30,7 +30,7 @@ export default function Contact() {
           target="_blank"
           data-tooltip="Resume"
         >
-          <AiOutlineLink />
+          <AiOutlineAudit />
         </IconLink>
         <IconLink
           href="https://github.com/pipi-shortstocking"
@@ -44,7 +44,7 @@ export default function Contact() {
           target="_blank"
           data-tooltip="Blog"
         >
-          <AiOutlineDesktop />
+          <AiOutlineEdit />
         </IconLink>
         <IconLink
           href="https://www.linkedin.com/in/jeongyun-kim-8596b632b/"

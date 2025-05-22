@@ -1,63 +1,75 @@
 import styled from "styled-components";
+import { AiOutlineGithub, AiOutlineLink, AiOutlineEdit } from "react-icons/ai";
 
 export default function About() {
   return (
     <ProjectsContainer>
       <InfoContainer>
         <ElementContainer>
-          {/* <Img src="/PodoStore.png" /> */}
-          <a
-            href="https://www.podo-store.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Img src="/Frame 1 (1).png" />
-          </a>
-          <Title>포도상점</Title>
-          <Subtitle>BE | 2023.02 ~ 2023.07</Subtitle>
-          <Content>
-            Spring Boot, JPA, MySQL, AWS, React, Docker, Swagger
-          </Content>
+          <Img src="/Frame 1 (1).png" />
+          <TitleContainer>
+            <Title>포도상점</Title>
+            <WebsiteLink href="https://www.podo-store.com/" target="_blank">
+              <AiOutlineLink size={25} />
+            </WebsiteLink>
+            <IconLink href="https://github.com/Podo-Store/BE" target="_blank">
+              <AiOutlineGithub size={25} />
+            </IconLink>
+            <IconLink
+              href="https://velog.io/@jannie526/series/Podo-Store-%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80"
+              target="_blank"
+            >
+              <AiOutlineEdit size={25} />
+            </IconLink>
+          </TitleContainer>
+          <Subtitle>BE | 2023.04 ~ing</Subtitle>
+          <Stack>- Spring Boot, JPA, MySQL, AWS, React, Docker, Swagger</Stack>
         </ElementContainer>
         <ElementContainer>
-          <a
-            href="https://www.podo-ticket.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Img src="/Frame 2 (1).png" />
-          </a>
-          <Title>포도티켓</Title>
-          <Subtitle>BE | 2023.08 ~ 2023.10</Subtitle>
-          <Content>
-            Node.js, Express.js, Sequlize, WebSocket, MySQL, AWS, React
-          </Content>
+          <Img src="/Frame 2 (1).png" />
+          <TitleContainer>
+            <Title>포도티켓</Title>
+            {/* <WebsiteLink href="https://www.podo-store.com/" target="_blank">
+              <AiOutlineLink size={25} />
+            </WebsiteLink> */}
+            <IconLink href="https://github.com/Podo-Ticket/BE" target="_blank">
+              <AiOutlineGithub size={25} />
+            </IconLink>
+            <IconLink
+              href="https://velog.io/@jannie526/series/PODO-TICKET-%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80"
+              target="_blank"
+            >
+              <AiOutlineEdit size={25} />
+            </IconLink>
+          </TitleContainer>
+          <Subtitle>BE | 2024.10 ~ing</Subtitle>
+          <Stack>
+            - Node.js, Express.js, Sequlize, WebSocket, MySQL, AWS, React
+          </Stack>
         </ElementContainer>
       </InfoContainer>
       <InfoContainer>
         <ElementContainer>
-          <a
-            href="https://github.com/PepperStones/BE"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Img src="/Frame 4.png" />
-          </a>
-          <Title>Blaybus 실전 앱 개발 경진대회</Title>
+          <Img src="/Frame 4.png" />
+          <TitleContainer>
+            <Title>Blaybus 실전 앱 개발 경진대회</Title>
+            <IconLink href="https://github.com/PepperStones/BE" target="_blank">
+              <AiOutlineGithub size={25} />
+            </IconLink>
+          </TitleContainer>
           <Subtitle>BE | 2025.01 ~ 2025.01</Subtitle>
-          <Content>Spring Boot, JPA, MySQL, AWS, React, PWA, Swagger</Content>
+          <Stack>- Spring Boot, JPA, MySQL, AWS, React, PWA, Swagger</Stack>
         </ElementContainer>
         <ElementContainer>
-          <a
-            href="https://github.com/KW-MUJI"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Img src="/Frame 3.png" />
-          </a>
-          <Title>광운대학교 참빛설계학기</Title>
+          <Img src="/Frame 3.png" />
+          <TitleContainer>
+            <Title>광운대학교 참빛설계학기</Title>
+            <IconLink href="https://github.com/KW-MUJI" target="_blank">
+              <AiOutlineGithub size={25} />
+            </IconLink>
+          </TitleContainer>
           <Subtitle>BE | 2024.08 ~ 2024.12</Subtitle>
-          <Content>Spring Boot, JPA, MySQL, AWS, React, Swagger</Content>
+          <Stack>- Spring Boot, JPA, MySQL, AWS, React, Swagger</Stack>
         </ElementContainer>
       </InfoContainer>
     </ProjectsContainer>
@@ -100,30 +112,58 @@ const Img = styled.img`
   margin: 1rem 0;
 `;
 
-const Title = styled.h1`
+const TitleContainer = styled.div`
   display: flex;
+  flex-direction: row;
   align-items: center;
+  width: 100%;
+`;
+
+const Title = styled.h1`
   font-size: 1.4rem;
   color: #212529;
-  margin: 0;
+  margin: 0 0.5rem 0 0;
   text-align: left;
   font-family: "42dot Sans", sans-serif;
-  gap: 0.5rem;
 `;
 
 const Subtitle = styled.h2`
   font-size: 1.06rem;
   color: #212529;
-  margin: 0.4rem 0 0 0;
+  margin: 0.4rem 0 0 0rem;
   text-align: left;
   font-family: "42dot Sans", sans-serif;
 `;
 
-const Content = styled.h3`
-  font-size: 1.1rem;
+const Stack = styled.h3`
+  font-size: 1rem;
   color: #495057;
   margin: 0.2rem 0;
   width: 100%; // 이미지와 같은 너비로 설정
   max-width: 30rem;
   font-family: "42dot Sans", sans-serif;
+`;
+
+const WebsiteLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.3rem 0 0;
+  color: black;
+
+  &:hover {
+    color: #495057;
+  }
+`;
+
+const IconLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.25rem 0 0;
+  color: black;
+
+  &:hover {
+    color: #495057;
+  }
 `;

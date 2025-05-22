@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import {
   AiOutlineGithub,
-  AiOutlineLink,
   AiOutlineLinkedin,
   AiOutlineInstagram,
-  AiOutlineDesktop,
+  AiOutlineEdit,
+  AiOutlineAudit,
 } from "react-icons/ai";
 
 export default function About() {
@@ -21,7 +21,7 @@ export default function About() {
             rel="noopener noreferrer"
             data-tooltip="Resume"
           >
-            <AiOutlineLink size={28} />
+            <AiOutlineAudit size={28} />
           </ResumeLink>
         </Title>
         <Content>
@@ -39,7 +39,7 @@ export default function About() {
             Github
           </Link>
           <Link href="https://velog.io/@jannie526" target="_blank">
-            <AiOutlineDesktop size={22} />
+            <AiOutlineEdit size={22} />
             Blog
           </Link>
           <Link
