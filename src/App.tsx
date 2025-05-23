@@ -3,6 +3,11 @@ import Home from "./pages/Home.tsx";
 import Navbar from "./components/Navbar.tsx";
 import About from "./pages/About.tsx";
 import Projects from "./pages/Projects.tsx";
+import PodoStore from "./pages/projects/PodoStore.tsx";
+import PodoTicket from "./pages/projects/PodoTicket.tsx";
+import Dogether from "./pages/projects/Dogether.tsx";
+import Muji from "./pages/projects/Muji.tsx";
+import SaveKids from "./pages/projects/SaveKids.tsx";
 import Contact from "./pages/Contact.tsx";
 import styled from "styled-components";
 
@@ -16,6 +21,11 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/projects/podostore" element={<PodoStore />} />
+            <Route path="/projects/podoticket" element={<PodoTicket />} />
+            <Route path="/projects/dogether" element={<Dogether />} />
+            <Route path="/projects/muji" element={<Muji />} />
+            <Route path="/projects/savekids" element={<SaveKids />} />
           </Routes>
         </Content>
         <Navbar />

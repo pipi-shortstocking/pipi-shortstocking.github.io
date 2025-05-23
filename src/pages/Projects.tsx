@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { AiOutlineGithub, AiOutlineLink, AiOutlineEdit } from "react-icons/ai";
 
@@ -5,72 +6,113 @@ export default function About() {
   return (
     <ProjectsContainer>
       <InfoContainer>
-        <ElementContainer>
+        <ElementLink to="/projects/podostore">
           <Img src="/Frame 1 (1).png" />
           <TitleContainer>
             <Title>포도상점</Title>
-            <WebsiteLink href="https://www.podo-store.com/" target="_blank">
+            <WebsiteLink
+              href="https://www.podo-store.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
               <AiOutlineLink size={25} />
             </WebsiteLink>
-            <IconLink href="https://github.com/Podo-Store/BE" target="_blank">
+            <IconLink
+              href="https://github.com/Podo-Store/BE"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
               <AiOutlineGithub size={25} />
             </IconLink>
             <IconLink
               href="https://velog.io/@jannie526/series/Podo-Store-%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80"
               target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
             >
               <AiOutlineEdit size={25} />
             </IconLink>
           </TitleContainer>
-          <Subtitle>BE | 2023.04 ~ing</Subtitle>
-          <Stack>- Spring Boot, JPA, MySQL, AWS, React, Docker, Swagger</Stack>
-        </ElementContainer>
-        <ElementContainer>
+          <Subtitle>스토리 IP 거래 오픈마켓</Subtitle>
+        </ElementLink>
+        <ElementLink to="/projects/podoticket">
           <Img src="/Frame 2 (1).png" />
           <TitleContainer>
             <Title>포도티켓</Title>
-            {/* <WebsiteLink href="https://www.podo-store.com/" target="_blank">
-              <AiOutlineLink size={25} />
-            </WebsiteLink> */}
-            <IconLink href="https://github.com/Podo-Ticket/BE" target="_blank">
+            <IconLink
+              href="https://github.com/Podo-Ticket/BE"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
               <AiOutlineGithub size={25} />
             </IconLink>
             <IconLink
               href="https://velog.io/@jannie526/series/PODO-TICKET-%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80"
               target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
             >
               <AiOutlineEdit size={25} />
             </IconLink>
           </TitleContainer>
-          <Subtitle>BE | 2024.10 ~ing</Subtitle>
-          <Stack>
-            - Node.js, Express.js, Sequlize, WebSocket, MySQL, AWS, React
-          </Stack>
-        </ElementContainer>
+          <Subtitle>NFC 티켓 발권 서비스</Subtitle>
+        </ElementLink>
       </InfoContainer>
       <InfoContainer>
-        <ElementContainer>
+        <ElementLink to="/projects/dogether">
           <Img src="/Frame 4.png" />
           <TitleContainer>
             <Title>Blaybus 실전 앱 개발 경진대회</Title>
-            <IconLink href="https://github.com/PepperStones/BE" target="_blank">
+            <IconLink
+              href="https://github.com/PepperStones/BE"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
               <AiOutlineGithub size={25} />
             </IconLink>
           </TitleContainer>
-          <Subtitle>BE | 2025.01 ~ 2025.01</Subtitle>
-          <Stack>- Spring Boot, JPA, MySQL, AWS, React, PWA, Swagger</Stack>
-        </ElementContainer>
-        <ElementContainer>
+          <Subtitle>주식회사 두핸즈 인사관리 전용 앱</Subtitle>
+        </ElementLink>
+        <ElementLink to="/projects/muji">
           <Img src="/Frame 3.png" />
           <TitleContainer>
             <Title>광운대학교 참빛설계학기</Title>
-            <IconLink href="https://github.com/KW-MUJI" target="_blank">
+            <IconLink
+              href="https://github.com/KW-MUJI"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
               <AiOutlineGithub size={25} />
             </IconLink>
           </TitleContainer>
-          <Subtitle>BE | 2024.08 ~ 2024.12</Subtitle>
-          <Stack>- Spring Boot, JPA, MySQL, AWS, React, Swagger</Stack>
-        </ElementContainer>
+          <Subtitle>
+            광운대학교 학생들을 위한 학업 및 협업 효율화 플랫폼
+          </Subtitle>
+        </ElementLink>
+      </InfoContainer>
+      <InfoContainer>
+        <ElementLink to="/projects/muji">
+          <Img src="/Frame 5.png" />
+          <TitleContainer>
+            <Title>광운대학교 산학연계 SW프로젝트</Title>
+            <IconLink
+              href="https://github.com/pipi-shortstocking/SaveKids"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <AiOutlineGithub size={25} />
+            </IconLink>
+          </TitleContainer>
+          <Subtitle>
+            집안 환경 내 VR 메타버스 소아 응급처치 교육 프로그램
+          </Subtitle>
+        </ElementLink>
       </InfoContainer>
     </ProjectsContainer>
   );
@@ -80,20 +122,18 @@ const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 6rem;
 `;
 
 const InfoContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
   padding: 1rem 0;
   gap: 2rem;
 `;
 
-const ElementContainer = styled.div`
+const ElementLink = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,6 +144,11 @@ const ElementContainer = styled.div`
   border-radius: 20px;
   background-color: #f8f8f8;
   padding: 1rem 2rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  &:hover {
+    box-shadow: 0 4px 20px #adb5bd55;
+  }
 `;
 
 const Img = styled.img`
@@ -128,19 +173,10 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.h2`
-  font-size: 1.06rem;
-  color: #212529;
+  font-size: 1.1rem;
+  color: #495057;
   margin: 0.4rem 0 0 0rem;
   text-align: left;
-  font-family: "42dot Sans", sans-serif;
-`;
-
-const Stack = styled.h3`
-  font-size: 1rem;
-  color: #495057;
-  margin: 0.2rem 0;
-  width: 100%; // 이미지와 같은 너비로 설정
-  max-width: 30rem;
   font-family: "42dot Sans", sans-serif;
 `;
 
