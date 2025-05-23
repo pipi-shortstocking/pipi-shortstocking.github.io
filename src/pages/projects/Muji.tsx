@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
 export default function Muji() {
-  return <h1>Coming Soon</h1>;
+  return <Title>Muji</Title>;
 }
+
+const Title = styled.h2`
+  color: #212529;
+  font-size: 12rem;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  // font-family: "Anton", sans-serif;
+`;

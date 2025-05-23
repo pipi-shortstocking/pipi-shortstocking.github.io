@@ -36,6 +36,14 @@ export default function About() {
             </IconLink>
           </TitleContainer>
           <Subtitle>스토리 IP 거래 오픈마켓</Subtitle>
+          <StackContainer>
+            <Stack>Spring Boot</Stack>
+            <Stack>JPA</Stack>
+            <Stack>MySQL</Stack>
+            <Stack>AWS</Stack>
+            <Stack>Docker</Stack>
+            <Stack>Swagger</Stack>
+          </StackContainer>
         </ElementLink>
         <ElementLink to="/projects/podoticket">
           <Img src="/Frame 2 (1).png" />
@@ -59,6 +67,15 @@ export default function About() {
             </IconLink>
           </TitleContainer>
           <Subtitle>NFC 티켓 발권 서비스</Subtitle>
+          <StackContainer>
+            <Stack>Node.js</Stack>
+            <Stack>Express.js</Stack>
+            <Stack>Sequlize</Stack>
+            <Stack>MySQL</Stack>
+            <Stack>AWS</Stack>
+            <Stack>Swagger</Stack>
+            <Stack>WebSocket</Stack>
+          </StackContainer>
         </ElementLink>
       </InfoContainer>
       <InfoContainer>
@@ -76,6 +93,14 @@ export default function About() {
             </IconLink>
           </TitleContainer>
           <Subtitle>주식회사 두핸즈 인사관리 전용 앱</Subtitle>
+          <StackContainer>
+            <Stack>Spring Boot</Stack>
+            <Stack>JPA</Stack>
+            <Stack>MySQL</Stack>
+            <Stack>AWS</Stack>
+            <Stack>Docker</Stack>
+            <Stack>Swagger</Stack>
+          </StackContainer>
         </ElementLink>
         <ElementLink to="/projects/muji">
           <Img src="/Frame 3.png" />
@@ -93,10 +118,18 @@ export default function About() {
           <Subtitle>
             광운대학교 학생들을 위한 학업 및 협업 효율화 플랫폼
           </Subtitle>
+          <StackContainer>
+            <Stack>Spring Boot</Stack>
+            <Stack>JPA</Stack>
+            <Stack>MySQL</Stack>
+            <Stack>AWS</Stack>
+            <Stack>Docker</Stack>
+            <Stack>Swagger</Stack>
+          </StackContainer>
         </ElementLink>
       </InfoContainer>
       <InfoContainer>
-        <ElementLink to="/projects/muji">
+        <ElementLink to="/projects/savekids">
           <Img src="/Frame 5.png" />
           <TitleContainer>
             <Title>광운대학교 산학연계 SW프로젝트</Title>
@@ -112,6 +145,10 @@ export default function About() {
           <Subtitle>
             집안 환경 내 VR 메타버스 소아 응급처치 교육 프로그램
           </Subtitle>
+          <StackContainer>
+            <Stack>Unity</Stack>
+            <Stack>C#</Stack>
+          </StackContainer>
         </ElementLink>
       </InfoContainer>
     </ProjectsContainer>
@@ -124,6 +161,7 @@ const ProjectsContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 6rem;
+  font-family: "42dot Sans", sans-serif;
 `;
 
 const InfoContainer = styled.div`
@@ -146,6 +184,7 @@ const ElementLink = styled(Link)`
   padding: 1rem 2rem;
   cursor: pointer;
   transition: box-shadow 0.2s;
+
   &:hover {
     box-shadow: 0 4px 20px #adb5bd55;
   }
@@ -169,7 +208,6 @@ const Title = styled.h1`
   color: #212529;
   margin: 0 0.5rem 0 0;
   text-align: left;
-  font-family: "42dot Sans", sans-serif;
 `;
 
 const Subtitle = styled.h2`
@@ -177,7 +215,6 @@ const Subtitle = styled.h2`
   color: #495057;
   margin: 0.4rem 0 0 0rem;
   text-align: left;
-  font-family: "42dot Sans", sans-serif;
 `;
 
 const WebsiteLink = styled.a`
@@ -202,4 +239,26 @@ const IconLink = styled.a`
   &:hover {
     color: #495057;
   }
+`;
+
+const StackContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin: 0.5rem 0 0 -0.2rem;
+`;
+
+const Stack = styled.div`
+  display: flex;
+  align-items: center;
+  color: #212529;
+  text-decoration: none;
+  font-size: 0.9rem;
+  background-color: #ffffff;
+  border: 1px solid #0000001a;
+  border-radius: 11px;
+  padding: 0.4rem;
 `;

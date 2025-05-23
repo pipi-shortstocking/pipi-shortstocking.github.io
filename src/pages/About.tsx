@@ -114,6 +114,8 @@ export default function About() {
           <Content>- 웹 개발자 부트캠프 5기</Content>
           <Subtitle>2024 광운대학교 창업동아리</Subtitle>
           <Content>- 포도상점</Content>
+          <Subtitle>알파라운드 청년 창업 지원사업 알파청년 5기</Subtitle>
+          <Content>- 포도상점</Content>
           <Subtitle>2025 광운대학교 캠퍼스타운</Subtitle>
           <Content>- 포도상점</Content>
         </ElementContainer>
