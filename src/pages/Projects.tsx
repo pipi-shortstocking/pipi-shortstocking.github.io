@@ -176,8 +176,8 @@ const ElementLink = styled(Link)`
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  width: 30rem;
-  max-width: 30rem;
+  width: 33rem;
+  max-width: 32.6rem;
   border: 1px solid #0000001a;
   border-radius: 20px;
   background-color: #f8f8f8;
@@ -192,7 +192,6 @@ const ElementLink = styled(Link)`
 
 const Img = styled.img`
   width: 100%;
-  max-width: 30rem;
   margin: 1rem 0;
 `;
 
@@ -204,16 +203,9 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #212529;
   margin: 0 0.5rem 0 0;
-  text-align: left;
-`;
-
-const Subtitle = styled.h2`
-  font-size: 1.1rem;
-  color: #495057;
-  margin: 0.4rem 0 0 0rem;
   text-align: left;
 `;
 
@@ -227,6 +219,13 @@ const WebsiteLink = styled.a`
   &:hover {
     color: #495057;
   }
+`;
+
+const Subtitle = styled.h2`
+  font-size: 1.15rem;
+  color: #495057;
+  margin: 0.4rem 0 0.3rem 0;
+  text-align: left;
 `;
 
 const IconLink = styled.a`
@@ -259,6 +258,6 @@ const Stack = styled.div`
   font-size: 0.9rem;
   background-color: #ffffff;
   border: 1px solid #0000001a;
-  border-radius: 11px;
+  border-radius: 10px;
   padding: 0.4rem;
 `;
