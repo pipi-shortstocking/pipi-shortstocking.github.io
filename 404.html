@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=/" />
+    <script>
+      // 현재 호스트와 일치하는 경로만 hash로 변환 (외부 URL 차단)
+      var path = location.pathname + location.search + location.hash;
+      // 만약 경로가 http, https 등으로 시작하면(외부 URL), 메인으로 이동
+      if (/^(https?:)?\/\//i.test(path)) {
+        location.replace("/");
+      } else {
+        location.replace("/#" + path);
+      }
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
