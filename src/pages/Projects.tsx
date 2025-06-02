@@ -176,7 +176,7 @@ const ElementLink = styled(Link)`
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  width: 33rem;
+  width: 32.6rem;
   max-width: 32.6rem;
   border: 1px solid #0000001a;
   border-radius: 20px;
@@ -193,6 +193,7 @@ const ElementLink = styled(Link)`
 const Img = styled.img`
   width: 100%;
   margin: 1rem 0;
+  border-radius: 13px;
 `;
 
 const TitleContainer = styled.div`
