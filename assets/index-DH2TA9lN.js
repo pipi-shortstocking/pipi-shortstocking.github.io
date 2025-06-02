@@ -283,8 +283,8 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  width: 30rem;
-  max-width: 30rem;
+  width: 32.6rem;
+  max-width: 32.6rem;
   border: 1px solid #0000001a;
   border-radius: 20px;
   background-color: #f8f8f8;
@@ -297,22 +297,17 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   }
 `,yu=lt.img`
   width: 100%;
-  max-width: 30rem;
   margin: 1rem 0;
+  border-radius: 13px;
 `,vu=lt.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
 `,gu=lt.h1`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #212529;
   margin: 0 0.5rem 0 0;
-  text-align: left;
-`,pu=lt.h2`
-  font-size: 1.1rem;
-  color: #495057;
-  margin: 0.4rem 0 0 0rem;
   text-align: left;
 `,Wp=lt.a`
   display: flex;
@@ -324,6 +319,11 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   &:hover {
     color: #495057;
   }
+`,pu=lt.h2`
+  font-size: 1.15rem;
+  color: #495057;
+  margin: 0.4rem 0 0.3rem 0;
+  text-align: left;
 `,ma=lt.a`
   display: flex;
   align-items: center;
@@ -350,58 +350,65 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
   font-size: 0.9rem;
   background-color: #ffffff;
   border: 1px solid #0000001a;
-  border-radius: 11px;
+  border-radius: 10px;
   padding: 0.4rem;
-`;function Fp(){return g.jsx(Pp,{children:"Podo Store"})}const Pp=lt.h2`
+`;function Fp(){return g.jsx(Pp,{children:g.jsx(Ip,{children:"Podo Store"})})}const Pp=lt.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 6rem;
+  font-family: "42dot Sans", sans-serif;
+`,Ip=lt.h2`
   color: #212529;
   font-size: 12rem;
   margin: 0;
   font-family: "Bebas Neue", sans-serif;
   // font-family: "Anton", sans-serif;
-`;function Ip(){return g.jsx(t2,{children:"Podo Ticket"})}const t2=lt.h2`
+`;function t2(){return g.jsx(e2,{children:"Podo Ticket"})}const e2=lt.h2`
   color: #212529;
   font-size: 12rem;
   margin: 0;
   font-family: "Bebas Neue", sans-serif;
   // font-family: "Anton", sans-serif;
-`;function e2(){return g.jsx(l2,{children:"Dogether"})}const l2=lt.h2`
+`;function l2(){return g.jsx(a2,{children:"Dogether"})}const a2=lt.h2`
   color: #212529;
   font-size: 12rem;
   margin: 0;
   font-family: "Bebas Neue", sans-serif;
   // font-family: "Anton", sans-serif;
-`;function a2(){return g.jsx(n2,{children:"Muji"})}const n2=lt.h2`
+`;function n2(){return g.jsx(u2,{children:"Muji"})}const u2=lt.h2`
   color: #212529;
   font-size: 12rem;
   margin: 0;
   font-family: "Bebas Neue", sans-serif;
   // font-family: "Anton", sans-serif;
-`;function u2(){return g.jsx(i2,{children:"Save Kids"})}const i2=lt.h2`
+`;function i2(){return g.jsx(c2,{children:"Save Kids"})}const c2=lt.h2`
   color: #212529;
   font-size: 12rem;
   margin: 0;
   font-family: "Bebas Neue", sans-serif;
   // font-family: "Anton", sans-serif;
-`;function c2(){const[u,c]=M.useState(""),[f,r]=M.useState(""),[s,h]=M.useState(""),b=()=>{const x=encodeURIComponent(`Name: ${u}
+`;function r2(){const[u,c]=M.useState(""),[f,r]=M.useState(""),[s,h]=M.useState(""),b=()=>{const x=encodeURIComponent(`Name: ${u}
 
 Email: ${f}
-Content: ${s}`);window.location.href=`mailto:jannie526@naver.com?body=${x}`};return g.jsxs(r2,{children:[g.jsx(f2,{children:"Contact"}),g.jsx(o2,{children:"편하게 연락주세요!"}),g.jsxs(s2,{children:[g.jsx(Su,{href:"https://my.surfit.io/w/313702032",target:"_blank","data-tooltip":"Resume",children:g.jsx(v1,{})}),g.jsx(Su,{href:"https://github.com/pipi-shortstocking",target:"_blank","data-tooltip":"GitHub",children:g.jsx(ya,{})}),g.jsx(Su,{href:"https://velog.io/@jannie526",target:"_blank","data-tooltip":"Blog",children:g.jsx(fc,{})}),g.jsx(Su,{href:"https://www.linkedin.com/in/jeongyun-kim-8596b632b/",target:"_blank","data-tooltip":"LinkedIn",children:g.jsx(p1,{})}),g.jsx(Su,{href:"https://www.instagram.com/dev_pipi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",target:"_blank","data-tooltip":"Instagram",children:g.jsx(g1,{})})]}),g.jsxs(d2,{children:[g.jsxs(h2,{children:[g.jsxs(Gf,{children:[g.jsx(Xf,{children:"이름"}),g.jsx(O0,{type:"text",placeholder:"name",value:u,onChange:x=>c(x.target.value)})]}),g.jsxs(Gf,{children:[g.jsx(Xf,{children:"보내는 사람"}),g.jsx(O0,{type:"email",placeholder:"your email",value:f,onChange:x=>r(x.target.value)})]})]}),g.jsxs(Gf,{children:[g.jsx(Xf,{children:"내용"}),g.jsx(m2,{placeholder:"message",value:s,onChange:x=>h(x.target.value)})]}),g.jsx(y2,{onClick:b,children:"Send"})]})]})}const r2=lt.div`
+Content: ${s}`);window.location.href=`mailto:jannie526@naver.com?body=${x}`};return g.jsxs(f2,{children:[g.jsx(o2,{children:"Contact"}),g.jsx(s2,{children:"편하게 연락주세요!"}),g.jsxs(d2,{children:[g.jsx(Su,{href:"https://my.surfit.io/w/313702032",target:"_blank","data-tooltip":"Resume",children:g.jsx(v1,{})}),g.jsx(Su,{href:"https://github.com/pipi-shortstocking",target:"_blank","data-tooltip":"GitHub",children:g.jsx(ya,{})}),g.jsx(Su,{href:"https://velog.io/@jannie526",target:"_blank","data-tooltip":"Blog",children:g.jsx(fc,{})}),g.jsx(Su,{href:"https://www.linkedin.com/in/jeongyun-kim-8596b632b/",target:"_blank","data-tooltip":"LinkedIn",children:g.jsx(p1,{})}),g.jsx(Su,{href:"https://www.instagram.com/dev_pipi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",target:"_blank","data-tooltip":"Instagram",children:g.jsx(g1,{})})]}),g.jsxs(h2,{children:[g.jsxs(m2,{children:[g.jsxs(Gf,{children:[g.jsx(Xf,{children:"이름"}),g.jsx(O0,{type:"text",placeholder:"name",value:u,onChange:x=>c(x.target.value)})]}),g.jsxs(Gf,{children:[g.jsx(Xf,{children:"보내는 사람"}),g.jsx(O0,{type:"email",placeholder:"your email",value:f,onChange:x=>r(x.target.value)})]})]}),g.jsxs(Gf,{children:[g.jsx(Xf,{children:"내용"}),g.jsx(y2,{placeholder:"message",value:s,onChange:x=>h(x.target.value)})]}),g.jsx(v2,{onClick:b,children:"Send"})]})]})}const f2=lt.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`,f2=lt.h1`
+`,o2=lt.h1`
   color: #212529;
   font-size: 7rem;
   margin: 0;
   // font-family: "Anton", sans-serif;
   font-family: "Bebas Neue", sans-serif;
-`,o2=lt.h3`
+`,s2=lt.h3`
   color: #495057;
   font-size: 1.7rem;
   margin: 0;
   font-family: "42dot Sans", sans-serif;
-`,s2=lt.div`
+`,d2=lt.div`
   margin: 1rem 0;
   font-size: 3rem;
 `,Su=lt.a`
@@ -439,14 +446,14 @@ Content: ${s}`);window.location.href=`mailto:jannie526@naver.com?body=${x}`};ret
     opacity: 1;
     visibility: visible;
   }
-`,d2=lt.form`
+`,h2=lt.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
   margin-top: 2rem;
-`,h2=lt.div`
+`,m2=lt.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -483,7 +490,7 @@ Content: ${s}`);window.location.href=`mailto:jannie526@naver.com?body=${x}`};ret
   &:focus {
     outline: none;
   }
-`,m2=lt.textarea`
+`,y2=lt.textarea`
   height: 10rem;
   width: 43rem;
   background-color: #f8f8f8;
@@ -500,7 +507,7 @@ Content: ${s}`);window.location.href=`mailto:jannie526@naver.com?body=${x}`};ret
   &:focus {
     outline: none;
   }
-`,y2=lt.button`
+`,v2=lt.button`
   background-color: #212529;
   color: #f8f9fa;
   font-size: 1.6rem;
@@ -513,7 +520,7 @@ Content: ${s}`);window.location.href=`mailto:jannie526@naver.com?body=${x}`};ret
   &:hover {
     background-color: #495057;
   }
-`;function v2(){return g.jsx(sg,{children:g.jsxs(g2,{children:[g.jsx(p2,{children:g.jsxs(Xv,{children:[g.jsx($e,{path:"/",element:g.jsx(xp,{})}),g.jsx($e,{path:"/about",element:g.jsx(Gp,{})}),g.jsx($e,{path:"/projects",element:g.jsx(Jp,{})}),g.jsx($e,{path:"/contact",element:g.jsx(c2,{})}),g.jsx($e,{path:"/projects/podostore",element:g.jsx(Fp,{})}),g.jsx($e,{path:"/projects/podoticket",element:g.jsx(Ip,{})}),g.jsx($e,{path:"/projects/dogether",element:g.jsx(e2,{})}),g.jsx($e,{path:"/projects/muji",element:g.jsx(a2,{})}),g.jsx($e,{path:"/projects/savekids",element:g.jsx(u2,{})})]})}),g.jsx(Lp,{})]})})}const g2=lt.div`
+`;function g2(){return g.jsx(sg,{children:g.jsxs(p2,{children:[g.jsx(b2,{children:g.jsxs(Xv,{children:[g.jsx($e,{path:"/",element:g.jsx(xp,{})}),g.jsx($e,{path:"/about",element:g.jsx(Gp,{})}),g.jsx($e,{path:"/projects",element:g.jsx(Jp,{})}),g.jsx($e,{path:"/contact",element:g.jsx(r2,{})}),g.jsx($e,{path:"/projects/podostore",element:g.jsx(Fp,{})}),g.jsx($e,{path:"/projects/podoticket",element:g.jsx(t2,{})}),g.jsx($e,{path:"/projects/dogether",element:g.jsx(l2,{})}),g.jsx($e,{path:"/projects/muji",element:g.jsx(n2,{})}),g.jsx($e,{path:"/projects/savekids",element:g.jsx(i2,{})})]})}),g.jsx(Lp,{})]})})}const p2=lt.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -523,9 +530,9 @@ Content: ${s}`);window.location.href=`mailto:jannie526@naver.com?body=${x}`};ret
   background-color: #ffffff;
   user-select: none;
   overflow-x: hidden;
-`,p2=lt.div`
+`,b2=lt.div`
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-`;Fy.createRoot(document.getElementById("root")).render(g.jsx(M.StrictMode,{children:g.jsx(v2,{})}));
+`;Fy.createRoot(document.getElementById("root")).render(g.jsx(M.StrictMode,{children:g.jsx(g2,{})}));
