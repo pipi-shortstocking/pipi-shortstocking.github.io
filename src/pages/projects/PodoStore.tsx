@@ -86,61 +86,92 @@ export default function PodoStore() {
         <Content1>
           '작품 상세' 페이지 진입 시, 미리보기 로딩 지연 문제 발생
         </Content1>
-        <Content2 style={{ marginLeft: "2.5rem" }}>
-          - 원인 : InputStreamResource를 통해 전체 PDF를 한 번에 전송 → 페이지
-          렌더링 시 초기 로드 시간 과다 발생
-          <br />
-          - 해결 방법 : StreamingResponseBody 적용 → PDF 데이터를 스트리밍
-          방식으로 전송하여 초기 렌더링 속도 개선
-          <br />- 결과 : 대용량 파일(10MB 이상) 기준 평균 50%의 시간 단축
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인</Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          InputStreamResource를 통해 전체 PDF를 한 번에 전송 → 페이지 렌더링 시
+          초기 로드 시간 과다 발생
+        </Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 해결 방법</Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          StreamingResponseBody 적용 → PDF 데이터를 스트리밍 방식으로 전송하여
+          초기 렌더링 속도 개선
+        </Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 결과</Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          대용량 파일(10MB 이상) 기준 평균 50%의 시간 단축
         </Content2>
         <Content1 style={{ marginTop: "0.5rem" }}>
           배포 중인 서버에서 커넥션 누수 발생, 서버 다운 문제 발생
         </Content1>
-        <Content2 style={{ marginLeft: "2.5rem" }}>
-          - 원인 : OSIV 패턴 사용으로 인해 영속성 컨텍스트가 HTTP 응답 종료
-          전까지 DB 커넥션 유지
-          <br />
-          - 해결 방법 : spring.jpa.open-in-view=false 설정을 적용하여 OSIV 패턴
-          비활성화 처리
-          <br />- 결과 : 커넥션 누수 문제 해결 → DB 커넥션 안정성 확보 및 서버
-          안정화
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인</Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          OSIV 패턴 사용으로 인해 영속성 컨텍스트가 HTTP 응답 종료 전까지 DB
+          커넥션 유지
+        </Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 해결 방법</Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          spring.jpa.open-in-view=false 설정을 적용하여 OSIV 패턴 비활성화 처리
+        </Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 결과</Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          커넥션 누수 문제 해결 → DB 커넥션 안정성 확보 및 서버 안정화
         </Content2>
         <Subtitle1>🚀 설계/기술적 도전 경험 </Subtitle1>
         <Content1>Redis 기반 조회수 캐싱 설계 및 구현</Content1>
         <Content2 style={{ marginLeft: "2.5rem" }}>
-          - 배경 및 문제 상황 : 사용자 증가 및 인기 작품에 우려되는 잦은 조회수
-          증가로 인해 MySQL에 실시간 Write 트랜잭션 과다 발생 → DB 부하 증가 →
-          서버 비용 상승 및 성능 저하 우려
-          <br />
-          - 설계 방향 및 기술 선택 : 조회수 데이터는 실시간 일관성이 절대적으로
-          필요하지 않음 → In-Memory 캐싱을 통해 Write 트래픽 우회 설계 결정 →
-          Redis 활용하여 조회수를 1차로 저장 → 일정 주기로 MySQL에 배치 반영
-          <br />
-          - 구현 방법 : 조회수 증가 시 Redis에 임시 저장 → 6시간 간격의 배치
-          작업으로 MySQL에 일괄 업데이트 → 실시간 조회는 Redis 값을 우선으로
-          조회하도록 설계
-          <br />- 결과 및 효과 : MySQL에 대한 실시간 Write 트래픽 감소 → DB 부하
-          경감 확인 → 조회수 업데이트 성능 개선 및 서버 비용 절감
+          - 배경 및 문제 상황
+        </Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          사용자 증가 및 인기 작품에 우려되는 잦은 조회수 증가로 인해 MySQL에
+          실시간 Write 트랜잭션 과다 발생 → DB 부하 증가 → 서버 비용 상승 및
+          성능 저하 우려
+        </Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>
+          - 설계 방향 및 기술 선택
+        </Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          조회수 데이터는 실시간 일관성이 절대적으로 필요하지 않음 → In-Memory
+          캐싱을 통해 Write 트래픽 우회 설계 결정 → Redis 활용하여 조회수를
+          1차로 저장 → 일정 주기로 MySQL에 배치 반영
+        </Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 구현 방법</Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          조회수 증가 시 Redis에 임시 저장 → 6시간 간격의 배치 작업으로 MySQL에
+          일괄 업데이트 → 실시간 조회는 Redis 값을 우선으로 조회하도록 설계
+        </Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 결과 및 효과</Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          MySQL에 대한 실시간 Write 트래픽 감소 → DB 부하 경감 확인 → 조회수
+          업데이트 성능 개선 및 서버 비용 절감
         </Content2>
         <Content1 style={{ marginTop: "0.5rem" }}>
           OSIV 패턴 비활성화를 통한 트랜잭션 최적화
         </Content1>
         <Content2 style={{ marginLeft: "2.5rem" }}>
-          - 배경 및 문제 상황 : 미리보기 API 호출 시 OSIV 패턴 사용으로 인해
-          영속성 컨텍스트가 HTTP 응답 종료 시점까지 DB 커넥션 유지 → 커넥션 누수
-          발생 → DB 커넥션 고갈 문제 발생
-          <br />
-          - 설계 방향 및 기술 선택 : View 렌더링이 없는 API(예:
-          StreamingResponseBody) → HTTP 응답 완료 시점까지 DB 커넥션 유지 불필요
-          → OSIV 패턴 비활성화 적용 → 트랜잭션 종료 시점에 커넥션을 즉시
-          반환하도록 설계
-          <br />
-          - 구현 방법 : spring.jpa.open-in-view=false 설정 적용 → 트랜잭션 종료
-          시점에서 DB 커넥션 반환 → HTTP 응답 처리 단계에서는 DB 커넥션 점유
-          해제
-          <br />- 결과 및 효과 : 커넥션 누수 문제 해결 → 서비스 전체 트랜잭션
-          안정성 확보 및 DB 커넥션 자원 최적화
+          - 배경 및 문제 상황
+        </Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          미리보기 API 호출 시 OSIV 패턴 사용으로 인해 영속성 컨텍스트가 HTTP
+          응답 종료 시점까지 DB 커넥션 유지 → 커넥션 누수 발생 → DB 커넥션 고갈
+          문제 발생
+        </Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>
+          - 설계 방향 및 기술 선택
+        </Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          View 렌더링이 없는 API(예: StreamingResponseBody) → HTTP 응답 완료
+          시점까지 DB 커넥션 유지 불필요 → OSIV 패턴 비활성화 적용 → 트랜잭션
+          종료 시점에 커넥션을 즉시 반환하도록 설계
+        </Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 구현 방법</Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          spring.jpa.open-in-view=false 설정 적용 → 트랜잭션 종료 시점에서 DB
+          커넥션 반환 → HTTP 응답 처리 단계에서는 DB 커넥션 점유 해제
+        </Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 결과 및 효과</Content2>
+        <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
+          커넥션 누수 문제 해결 → 서비스 전체 트랜잭션 안정성 확보 및 DB 커넥션
+          자원 최적화
         </Content2>
         <Subtitle1>🤝 협업 경험</Subtitle1>
         <Content1>FE 개발자와 Swagger 기반 API 명세 협업</Content1>
