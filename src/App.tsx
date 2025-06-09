@@ -9,11 +9,12 @@ import Dogether from "./pages/projects/Dogether.tsx";
 import Muji from "./pages/projects/Muji.tsx";
 import SaveKids from "./pages/projects/SaveKids.tsx";
 import Contact from "./pages/Contact.tsx";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <GlobalStyle />
       <AppContainer>
         <Content>
           <Routes>
@@ -33,6 +34,12 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    user-select: text;
+  }
+`;
 
 const AppContainer = styled.div`
   display: flex;
