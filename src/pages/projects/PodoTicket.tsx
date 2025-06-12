@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { AiOutlineLink } from "react-icons/ai";
 
 export default function PodoTicket() {
   return (
