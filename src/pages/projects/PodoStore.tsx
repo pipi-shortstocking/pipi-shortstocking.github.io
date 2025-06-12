@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AiOutlineLink } from "react-icons/ai";
+import { AiOutlineLink, AiOutlineGithub, AiOutlineEdit } from "react-icons/ai";
 
 export default function PodoStore() {
   return (
@@ -16,8 +16,24 @@ export default function PodoStore() {
             <Title>포도상점</Title>
             <AiOutlineLink size={35} />
           </WebsiteLink>
-          <DateText>2024.04 ~ 진행 중</DateText>
+          <WebsiteLink
+            href="https://github.com/Podo-Store/BE"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <AiOutlineGithub size={34} />
+          </WebsiteLink>
+          <WebsiteLink
+            href="https://velog.io/@jannie526/series/Podo-Store-%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <AiOutlineEdit size={34} />
+          </WebsiteLink>
         </TitleContainer>
+        <DateText>2024.04 ~ 진행 중</DateText>
         <Subtitle1>👥 팀원 구성 및 역할</Subtitle1>
         <MemberContainer>
           <Member>BE 2명</Member>
@@ -252,7 +268,7 @@ const TitleContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  gap: 0.3rem;
+  gap: 0.1rem;
   width: 100%;
 `;
 
@@ -295,7 +311,7 @@ const Subtitle2 = styled.h2`
 const DateText = styled.h2`
   font-size: 1.25rem;
   color: #212529;
-  margin: 0;
+  margin: -0.3rem 0 -0.5rem 0.1rem;
 `;
 
 const Content1 = styled.h3`

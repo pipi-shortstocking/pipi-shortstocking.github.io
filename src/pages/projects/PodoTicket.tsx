@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { AiOutlineGithub, AiOutlineEdit } from "react-icons/ai";
 
 export default function PodoTicket() {
   return (
@@ -6,9 +7,25 @@ export default function PodoTicket() {
       <Img src="/podoticket.png" />
       <InfoContainer>
         <TitleContainer>
-          <Title>포도티켓</Title>
-          <DateText>2024.10 ~ 진행 중</DateText>
+          <WebsiteLink
+            href="https://github.com/Podo-Ticket/BE"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Title>포도티켓</Title>
+            <AiOutlineGithub size={35} />
+          </WebsiteLink>
+          <WebsiteLink
+            href="https://velog.io/@jannie526/series/PODO-TICKET-%EA%B0%9C%EB%B0%9C-%EC%9D%BC%EC%A7%80"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <AiOutlineEdit size={34} />
+          </WebsiteLink>
         </TitleContainer>
+        <DateText>2024.10 ~ 진행 중</DateText>
         <Subtitle1>👥 팀원 구성 및 역할</Subtitle1>
         <MemberContainer>
           <Member>BE 2명</Member>
@@ -251,14 +268,32 @@ const TitleContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  gap: 0.8rem;
+  gap: 0.1rem;
   width: 100%;
 `;
 
 const Title = styled.h1`
   font-size: 2.5rem;
   color: #212529;
-  margin: 0.5rem 0 0.3rem 0;
+  margin: 0.5rem 0.2rem 0.3rem 0;
+`;
+
+const WebsiteLink = styled.a`
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 0;
+  color: #212529;
+  gap: 0.2rem;
+
+  & > svg {
+    position: relative;
+    top: 0.26em;
+  }
+
+  &:hover {
+    color: #212529;
+  }
 `;
 
 const Subtitle1 = styled.h2`
@@ -276,7 +311,7 @@ const Subtitle2 = styled.h2`
 const DateText = styled.h2`
   font-size: 1.25rem;
   color: #212529;
-  margin: 0;
+  margin: -0.3rem 0 -0.5rem 0.1rem;
 `;
 
 const Content1 = styled.h3`
