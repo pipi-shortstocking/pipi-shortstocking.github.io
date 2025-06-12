@@ -63,7 +63,7 @@ export default function About() {
           <Title>👩‍💻 About me</Title>
           <Content>
             기술을 위한 기술이 아닌 그 기술 너머에 존재하는 사용자에 집중합니다.
-            NFC 기반 티켓 발권 시스템을 통해 평균 NPS 71.25라는 높은 사용자
+            NFC 기반 티켓 발권 시스템을 통해 평균 NPS 80.00라는 높은 사용자
             만족도를 달성했습니다.
             <br />
             <br />
@@ -112,7 +112,7 @@ export default function About() {
           <Content>- 집안 환경 내 VR 메타버스 소아 응급처치 교육</Content>
           <Subtitle>청년취업사관학교 새싹(SeSAC) 영등포</Subtitle>
           <Content>- 웹 개발자 부트캠프 5기</Content>
-          <Subtitle>2024 광운대학교 창업동아리</Subtitle>
+          <Subtitle>2024, 2025 광운대학교 창업동아리</Subtitle>
           <Content>- 포도상점</Content>
           <Subtitle>알파라운드 청년 창업 지원사업 알파청년 5기</Subtitle>
           <Content>- 포도상점</Content>
@@ -136,6 +136,7 @@ const AboutContainer = styled.div`
   align-items: flex-start;
   padding: 2rem;
   gap: 2rem;
+  margin-bottom: 6rem;
 `;
 
 const ProfileContainer = styled.div`

@@ -70,7 +70,7 @@ export default function PodoStore() {
           <br />
           <br />
         </Content2>
-        <Content1>
+        <Content1 style={{ fontSize: "1.35rem" }}>
           ✔️ 현재 VER 2.0.0까지 개발 완료 후 구글 검색 엔진 상위 노출 중
         </Content1>
         <Subtitle1>🛠️ 주요 기능 및 특징</Subtitle1>
