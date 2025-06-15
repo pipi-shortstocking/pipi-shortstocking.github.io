@@ -207,6 +207,7 @@ export default function PodoStore() {
         <Content2>
           - 기술적 이슈 및 BE 개발 진행 상황 적극 공유, 우선순위 논의 및 일정
           조율
+          <br /> - JIRA를 활용한 이슈 관리 및 진행 상황 공유
         </Content2>
         <Content1 style={{ marginTop: "0.5rem" }}>
           PO와 사업 방향성 논의 및 OKR 수립

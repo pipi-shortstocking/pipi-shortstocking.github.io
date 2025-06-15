@@ -215,6 +215,7 @@ export default function PodoTicket() {
         <Content2>
           - 현장 운영을 통해 발생한 문제점 및 개선 사항 논의 및 기술 개선 방향
           논의
+          <br />- JIRA를 활용한 이슈 관리 및 진행 상황 공유
         </Content2>
         <Content1 style={{ marginTop: "0.5rem" }}>
           사업 방향성 논의 및 OKR 수립

@@ -48,100 +48,89 @@ export default function Muji() {
           광운대학교 학생들의 학업 및 대외활동 효율화를 위한 통합 플랫폼
         </Content1>
         <Content2 style={{ marginTop: "0.5rem" }}>
-          - 팀원 모집 및 설문 조사를 위해 기존 커뮤니티 혹은 SNS를 통한 개인적인
-          연락 → 하나의 플랫폼에서 제공
+          - 학업 및 대회활동을 위해 기존 커뮤니티 혹은 SNS를 통한 개인적인 연락
+          → 하나의 플랫폼에서 제공
           <br />- 팀원 모집, 설문 조사, 일정 관리, 포트폴리오 등의 기능 통합 →
           프로젝트 및 대외 활동을 체계적이고 효율적으로 관리
         </Content2>
         <Subtitle1>🛠️ 주요 기능 및 특징</Subtitle1>
-        {/* <Content2>
-          - 활동 이력 기반 경험치 자동 부여 및 시각화
-          <br />- 관리자용 어드민 페이지 기능 (구성원 목록, 게시판, 지표 동기화)
-          <br />- PWA 기반 앱 제공으로 웹 모바일과 앱 환경 모두 지원
-        </Content2> */}
-        <Subtitle1>💻 본인 주요 작업 및 기여</Subtitle1>
-        {/* <Content1>DB 설계 및 구축</Content1>
         <Content2>
-          - Enum을 활용해 퀘스트, 경험치 종류 및 카테고리 정형화 → 타입 안정성과
-          유지보수 용이성 확보
-          <br />- 사용자, 활동 이력, 경험치, 게시글 관련 테이블 설계 및 관계형
-          데이터 모델링
+          - 학교 메일 주소를 사용한 회원가입 및 로그인
+          <br />- 팀플 모집 기능 (팀원 모집, 팀플 정보 등록 및 관리)
+          <br />- 포트폴리오 등록 및 관리 기능
+          <br />- 설문 조사 기능 (설문 생성, 응답 수집 및 결과 확인)
+          <br />- 일정 관리 기능 (팀플, 개인 일정 관리 및 학교 공지사항 확인)
         </Content2>
-        <Content1>서버 API 개발</Content1>
+        <Subtitle1>💻 본인 주요 작업 및 기여</Subtitle1>
+        <Content1>본교 학생 인증</Content1>
         <Content2>
-          - 로그인, 구성원 관리, 커스텀 등 주요 기능 API 설계 및 구현
-          <br />- 어드민 페이지 API 설계 및 구현
-        </Content2> */}
+          - JavaMailSender를 활용한 이메일 인증번호 발송 기능 구현 → 학교 메일
+          도메인만 가능
+          <br />- Redis를 인증 데이터 저장소로 활용하여 메인 DB 간섭 최소화 및
+          처리 속도 향상
+        </Content2>
+        <Content1>프로젝트 모집 및 포트폴리오 등록 기능</Content1>
+        <Content2>
+          - 마감일이 지난 프로젝트를 자동으로 비활성화하도록 @Scheduled 기반
+          스케줄러 구현
+          <br />- 등록한 포트폴리오 중 선택하여 프로젝트 지원 가능
+        </Content2>
         <Subtitle1>🐛 트러블 슈팅</Subtitle1>
-        {/* <Content1>성과 시스템에 대한 도메인 이해 부족</Content1>
+        <Content1>API 명세 일관성 문제</Content1>
         <Content2 style={{ marginLeft: "2.5rem" }}>- 원인</Content2>
         <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
-          다양한 지표(직무별 퀘스트, 리더부여 퀘스트, 전사 프로젝트, 인사평가
-          등)가 복합적으로 구성되어 있어 도메인 구조 파악에 많은 시간이 소요됨 →
-          초기 설계 논의 지연
+          Notion으로 API 명세를 작성하는 과정에서 파라미터 누락, 응답 형식 오타
+          등의 실수 발생 → FE와의 소통 오류 및 작업 지연
         </Content2>
         <Content2 style={{ marginLeft: "2.5rem" }}>- 해결 방법</Content2>
         <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
-          담당자와의 소통 및 팀원 간의 지속적인 회의를 통해 성과 관리 시스템
-          파악 → 데이터 흐름도 도식화 후 빠르게 구조 확정
+          Swagger 적용을 통해 서버 코드 기반의 자동 API 문서화 도입
         </Content2>
         <Content2 style={{ marginLeft: "2.5rem" }}>- 결과</Content2>
         <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
-          3일 내 도메인 파악 완료 및 설계 착수 → 일정 지연 없이 DB 설계 및 API
-          구현 본격화
-        </Content2> */}
+          실시간으로 정확한 API 명세 제공 가능 → 변경 사항 공유 속도 향상 및
+          개발 효율성 증가
+        </Content2>
         <Subtitle1>🚀 설계/기술적 도전 경험 </Subtitle1>
-        {/* <Content1>
-          Enum 기반 퀘스트, 경험치 종류 및 카테고리 설계 및 도입
-        </Content1>
+        <Content1>Redis 기반 이메일 인증 캐싱 시스템 도입</Content1>
         <Content2 style={{ marginLeft: "2.5rem" }}>
           - 배경 및 문제 상황
         </Content2>
         <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
-          다양한 유형의 경험치(업무, 자기계발, 조직문화 등)를 분류 없이 문자열로
-          관리 → 데이터 정합성 저하 및 비즈니스 로직 처리 복잡도 증가
+          MySQL에 인증번호 저장 → 단기 트래픽 증가 → DB 부하 발생 및 응답 속도
+          저하 우려
         </Content2>
         <Content2 style={{ marginLeft: "2.5rem" }}>
           - 설계 방향 및 기술 선택
         </Content2>
         <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
-          경험치 타입의 수는 한정적이고 변하지 않음 → 정형화 가능한 데이터로
-          판단 → 자바의 Enum 타입 도입을 통해 경험치 유형을 코드 차원에서 제한 →
-          타입 안정성 확보 및 유지보수 편의성 향상
+          인증 데이터는 TTL이 명확하고 일회성이 강함 → In-Memory 캐싱에 적합 →
+          Redis 선택
         </Content2>
         <Content2 style={{ marginLeft: "2.5rem" }}>- 구현 방법</Content2>
         <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
-          퀘스트, 경험치 종류를 Enum으로 정의 → Enum을 JPA @Enumerated
-          어노테이션과 함께 사용해 DB에 저장 → Swagger 명세에도 Enum 값을
-          명시하여 API 사용성 개선
+          인증번호를 Redis에 저장하고 TTL을 5분으로 설정 → 데이터 정합성과
+          보안성 모두 확보
         </Content2>
         <Content2 style={{ marginLeft: "2.5rem" }}>- 결과 및 효과</Content2>
         <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
-          잘못된 입력 방지 및 타입 안정성 확보 및 데이터 정합성 향상 → FE와의
-          협업 시 일관된 분류 기준 공유 가능 → 이후 기능 확장 시 Enum만 수정하면
-          전체 로직 연동 가능 → 유지보수 효율 증가
-        </Content2> */}
-        <Subtitle1>🤝 협업 경험</Subtitle1>
-        {/* <Content1>
-          주최 측 담담자와 PM, 개발자들 간의 질의응답 및 토의 진행
-        </Content1>
-        <Content2>
-          - 성과 관리 시스템 체계를 정확하게 시각화 하기 위한 논의 진행
+          메인 DB 부하 감소 및 응답 속도 향상으로 사용자 경험 개선
         </Content2>
-        <Content1>Swagger를 활용한 API 명세 작성</Content1>
-        <Content2>- FE와의 효율적인 인터페이스 협업</Content2> */}
+        <Subtitle1>🤝 협업 경험</Subtitle1>
+        <Content1>팀원들과 주 1회 회의 참여</Content1>
+        <Content2>- 프로젝트 진행 상황 공유 및 개발 방향 논의</Content2>
+        <Content1>Swagger를 통해 API 명세 공유</Content1>
+        <Content2>- API 스펙 조율 및 문서화 주도</Content2>
         <Subtitle1>🎉 결과 및 성과 </Subtitle1>
         <Subtitle2>결과</Subtitle2>
-        {/* <Content2 style={{ marginLeft: "2rem" }}>
-          1. VER 1.0.0 MVP 개발 완료 및 PWA 형태로 배포
-          <br />
-          2. 구성원 대상 시연 행사에서 UX가 직관적이며 사용자의 동기부여에 관한
-          긍정적인 피드백을 경험함
-        </Content2> */}
+        <Content2 style={{ marginLeft: "2rem" }}>
+          MVP 기준 모든 핵심 기능(회원가입, 팀 모집, 설문조사, 일정 관리 등)
+          구현 완료
+        </Content2>
         <Subtitle2 style={{ marginTop: "0.7rem" }}>성과</Subtitle2>
-        {/* <Content2 style={{ marginLeft: "2rem" }}>
-          사내 성과 관리 시스템을 실제 업무 맥락에 맞춰 프로토타이핑한 첫 경험
-        </Content2> */}
+        <Content2 style={{ marginLeft: "2rem" }}>
+          광운대학교 참빛설계학기 프로젝트 전시회 참여 및 발표 경험
+        </Content2>
       </InfoContainer>
     </ProjectContainer>
   );
