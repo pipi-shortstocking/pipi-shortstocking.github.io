@@ -105,7 +105,7 @@ export default function About() {
         <ElementLink to="/projects/muji">
           <Img src="/Frame 3.png" />
           <TitleContainer>
-            <Title>광운대학교 참빛설계학기</Title>
+            <Title>광운 대학 생활 도우미 - 광운 무인양품</Title>
             <IconLink
               href="https://github.com/KW-MUJI"
               target="_blank"

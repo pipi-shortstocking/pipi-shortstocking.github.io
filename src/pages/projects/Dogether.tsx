@@ -27,10 +27,9 @@ export default function Dogether() {
         </MemberContainer>
         <Content1>백엔드 개발자로 DB 설계 및 구축, API 개발</Content1>
         <Content2>
-          Enum 기반 설계를 통해 카테고리 타입 안정성 확보 및 유지보수 효율성
+          - Enum 기반 설계를 통해 카테고리 타입 안정성 확보 및 유지보수 효율성
           향상
-          <br />
-          데이터 흐름에 맞춰 DB 스키마 설계 및 연동 로직 구현
+          <br />- 데이터 흐름에 맞춰 DB 스키마 설계 및 연동 로직 구현
         </Content2>
         <Subtitle1 style={{ marginBottom: "-0.2rem" }}>🛠️ 사용 기술</Subtitle1>
         <Subtitle2 style={{ fontSize: "1.33rem" }}>BackEnd</Subtitle2>
