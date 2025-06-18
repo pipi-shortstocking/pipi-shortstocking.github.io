@@ -99,7 +99,7 @@ export default function PodoTicket() {
         </Content2>
         <Subtitle1>🐛 트러블 슈팅 </Subtitle1>
         <Content1>약 10명 발권 이후 ConnectionTimeout 발생</Content1>
-        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인</Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인 및 배경</Content2>
         <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
           parseInt() 미처리로 인한 데이터 타입 불일치 → 트랜잭션 재시도 증가로
           커넥션 과부하 유발
@@ -116,7 +116,7 @@ export default function PodoTicket() {
         <Content1 style={{ marginTop: "0.5rem" }}>
           대규모 데이터 처리 중 데드락 발생
         </Content1>
-        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인</Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인 및 배경</Content2>
         <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
           불필요한 행 락 과다 사용, REPEATABLE_READ 격리 수준의 갭 락 → 락 경합
           유발 및 순환 대기 상태 발생

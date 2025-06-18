@@ -111,7 +111,7 @@ export default function PodoStore() {
         <Content1>
           '작품 상세' 페이지 진입 시, 미리보기 로딩 지연 문제 발생
         </Content1>
-        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인</Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인 및 배경</Content2>
         <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
           InputStreamResource를 통해 전체 PDF를 한 번에 전송 → 페이지 렌더링 시
           초기 로드 시간 과다 발생
@@ -128,7 +128,7 @@ export default function PodoStore() {
         <Content1 style={{ marginTop: "0.5rem" }}>
           배포 중인 서버에서 커넥션 누수 발생, 서버 다운 문제 발생
         </Content1>
-        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인</Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인 및 배경</Content2>
         <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
           OSIV 패턴 사용으로 인해 영속성 컨텍스트가 HTTP 응답 종료 전까지 DB
           커넥션 유지

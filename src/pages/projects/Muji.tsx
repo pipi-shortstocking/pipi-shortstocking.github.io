@@ -77,7 +77,7 @@ export default function Muji() {
         </Content2>
         <Subtitle1>🐛 트러블 슈팅</Subtitle1>
         <Content1>API 명세 일관성 문제</Content1>
-        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인</Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인 및 배경</Content2>
         <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
           Notion으로 API 명세를 작성하는 과정에서 파라미터 누락, 응답 형식 오타
           등의 실수 발생 → FE와의 소통 오류 및 작업 지연

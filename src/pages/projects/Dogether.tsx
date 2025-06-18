@@ -73,7 +73,7 @@ export default function Dogether() {
         </Content2>
         <Subtitle1>🐛 트러블 슈팅</Subtitle1>
         <Content1>성과 시스템에 대한 도메인 이해 부족</Content1>
-        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인</Content2>
+        <Content2 style={{ marginLeft: "2.5rem" }}>- 원인 및 배경</Content2>
         <Content2 style={{ marginLeft: "4rem", fontWeight: "500" }}>
           다양한 지표(직무별 퀘스트, 리더부여 퀘스트, 전사 프로젝트, 인사평가
           등)가 복합적으로 구성되어 있어 도메인 구조 파악에 많은 시간이 소요됨 →
