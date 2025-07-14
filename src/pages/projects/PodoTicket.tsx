@@ -46,7 +46,7 @@ export default function PodoTicket() {
         <StackContainer>
           <Stack>Node.js</Stack>
           <Stack>Express.js</Stack>
-          <Stack>Sequlize</Stack>
+          <Stack>Sequelize</Stack>
           <Stack>MySQL</Stack>
           <Stack>Redis</Stack>
           <Stack>WebSocket</Stack>
